@@ -25,9 +25,8 @@ COPY run-rcloud.sh /data/rcloud/scripts/run-rcloud.sh
 
 RUN R --vanilla --slave -e 'install.packages(c("ulog","rcloud.solr"),,c("http://rforge.net","http://cloud.r-project.org"))'
 
-USER root:root
-RUN sed -i 's/ ::1//' /etc/redis/redis.conf 
+RUN mkdir -p /data/rcloud/data/rcs
 
 EXPOSE 8080
 
-CMD ["/data/rcloud/scripts/run.sh"]
+CMD ["/data/rcloud/scripts/run-rcloud.sh"]
