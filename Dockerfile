@@ -1,4 +1,4 @@
-FROM docker.io/urbanek/ubuntu-r:18.04-3.5.2
+FROM docker.io/urbanek/ubuntu-r:18.04-3.5.3
 
 MAINTAINER Simon Urbanek <simon.urbanek@R-project.org>
 
@@ -16,7 +16,7 @@ USER rcloud:rcloud
 
 RUN cd /data && \
   git clone https://github.com/att/rcloud.git
-RUN cd /data/rcloud && git checkout 2.1.1 && MAKEFLAGS=-j8 sh scripts/bootstrapR.sh
+RUN cd /data/rcloud && git checkout 2.1.2 && MAKEFLAGS=-j8 sh scripts/bootstrapR.sh
 RUN cd /data/rcloud && sh scripts/build.sh --no-js
 RUN for i in tmp run; do if [ ! -e /data/rcloud/$i ]; then mkdir /data/rcloud/$i && chmod 0777 /data/rcloud/$i; fi; done
 COPY rcloud.conf /data/rcloud/conf/rcloud.conf
