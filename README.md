@@ -8,7 +8,7 @@ The RCloud setup in the image is single-user (uid `rcloud`), proixified with com
 
 For read-only (production) deployments it is recommended to make the gists directory read-only (once the production notebooks are created/cloned) and remove `edit.html`.
 
-The source for the image is on GitHub in the [docker-rcloud-aas](https://github.com/s-u/docker-rcloud-aas) repository.
+The source for the image is on GitHub in the [docker-rcloud-aas](https://github.com/s-u/docker-rcloud-aas) repository and the Docker Hub location is [urbanek/rcloud-aas](https://cloud.docker.com/u/urbanek/repository/docker/urbanek/rcloud-aas).
 
 To use:
 ```
@@ -19,4 +19,4 @@ and access at
 http://127.0.0.1:8080/login.R
 ```
 
-You can deploy notebooks from a runnign RCloud instance using the [rcloud.dockerize](https://github.com/att/rcloud.dockerize) package. It can be enabled as an extension in RCloud which adds a "dockezie" button to the top bar or you can use the more versatile `rcloud.dockerize:::dockerize(ids, pkgs, files)` function.
+You can deploy notebooks from a running RCloud instance using the [rcloud.dockerize](https://github.com/att/rcloud.dockerize) package. It can be enabled as an extension in RCloud which adds a "dockerize" button to the top bar or you can use the more versatile `rcloud.dockerize:::dockerize(ids, pkgs, files)` function directly.
