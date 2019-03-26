@@ -18,3 +18,5 @@ and access at
 ```
 http://127.0.0.1:8080/login.R
 ```
+
+You can deploy notebooks from a runnign RCloud instance using the [rcloud.dockerize](https://github.com/att/rcloud.dockerize) package. It can be enabled as an extension in RCloud which adds a "dockezie" button to the top bar or you can use the more versatile `rcloud.dockerize:::dockerize(ids, pkgs, files)` function.
