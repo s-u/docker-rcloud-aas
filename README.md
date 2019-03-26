@@ -12,7 +12,7 @@ The source for the image is on GitHub in the [docker-rcloud-aas](https://github.
 
 To use:
 ```
-docker run -p 8080:8080 urbanek/rcloud-aas:2.1.1-1
+docker run -p 8080:8080 urbanek/rcloud-aas:2.1.2-0
 ```
 and access at
 ```
